@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artifact Search Page</title>
+  <style>
+    /* Ancient Theme CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #f4f1e1;
+      color: #3b3024;
+      background-image: url('https://www.transparenttextures.com/patterns/old-wall.png');
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      background-color: #5a4a3b;
+      color: #f4f1e1;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid #3b3024;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-logo h1 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-style: italic;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: #f4f1e1;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      background-color: #80694f;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .nav-links a:hover {
+      background-color: #a0835b;
+    }
+
+    /* Main Content Styles */
+    .main-content {
+      text-align: center;
+      margin-top: 5rem;
+      padding: 2rem;
+    }
+
+    .main-content h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #5a4a3b;
+      font-weight: bold;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .main-content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #5a4a3b;
+      font-style: italic;
+    }
+
+    /* Search Form Styles */
+    .search-form {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .search-form input[type="text"] {
+      padding: 0.75rem;
+      font-size: 1rem;
+      width: 300px;
+      border: 1px solid #80694f;
+      border-radius: 5px;
+      background-color: #f4f1e1;
+      color: #3b3024;
+    }
+
+    /* Category Section */
+    .categories {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .category {
+      padding: 1rem 1.5rem;
+      background-color: #80694f;
+      color: #f4f1e1;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .category:hover {
+      background-color: #a0835b;
+    }
+
+    /* Additional Styling for Ancient Feel */
+    h1, h2 {
+      font-family: 'Papyrus', 'Georgia', serif;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://www.transparenttextures.com/patterns/old-wall.png');
+      opacity: 0.1;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <h1>Artifact Authentication</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index">Home</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h2>Search Artifacts</h2>
+    <p>Explore the world of ancient artifacts and verify their authenticity.</p>
+
+    <!-- Search Bar -->
+    <form action="/searching" method="GET" class="search-form">
+      <input type="text" name="query" placeholder="Enter artifact name..." required>
+    </form>
+
+    <!-- Category Section -->
+    <div class="categories">
+      <div class="category" onclick="location.href='Egyptian'">Egyptian Artifacts</div>
+      <div class="category" onclick="location.href='Greek'">Greek Artifacts</div>
+      <div class="category" onclick="location.href='Roman'">Roman Artifacts</div>
+      <div class="category" onclick="location.href='Asian'">Asian Artifacts</div>
+      <div class="category" onclick="location.href='Native'">Native American Artifacts</div>
+    </div>
+  </div>
+</body>
+</html>

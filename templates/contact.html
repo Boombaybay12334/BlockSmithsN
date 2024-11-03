@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Ancient Artifacts</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Garamond', serif;
+            margin: 0;
+            color: #3d2f1b;
+            background-color: #efe2c6; /* Warm parchment color */
+            background-image: url('images/parchment-texture.jpg'); /* Subtle texture */
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: #5e3e20; /* Dark brown */
+            padding: 1.5rem;
+            text-align: center;
+            color: #f3e0b7; /* Warm beige text */
+            border-bottom: 5px double #b8915b; /* Decorative border */
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #f3e0b7;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #b8915b;
+        }
+
+        .contact-section {
+            max-width: 700px;
+            margin: 60px auto;
+            padding: 30px;
+            background-color: rgba(255, 250, 240, 0.95); /* Light transparency */
+            border: 3px solid #5e3e20;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+            font-size: 1.1rem;
+        }
+
+        .contact-section h2 {
+            text-align: center;
+            color: #7a532a; /* Deep, golden brown */
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px #b8915b;
+        }
+
+        .contact-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-section label {
+            color: #5e3e20;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .contact-section input,
+        .contact-section textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #b8915b;
+            border-radius: 5px;
+            background-color: #fff8e1;
+            font-size: 1rem;
+            color: #3d2f1b;
+        }
+
+        .contact-section textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        .contact-section button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #5e3e20;
+            color: #f3e0b7;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-section button:hover {
+            background-color: #7a532a; /* Slightly lighter on hover */
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #5e3e20;
+            color: #f3e0b7;
+            border-top: 5px double #b8915b;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <ul>
+                <li><a href="index">Home</a></li>
+                <li><a href="search">Search</a></li>
+                <li><a href="about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact">
+            <h2>Get in Touch</h2>
+            <form action="submit_contact_form" method="post">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ancient Artifacts. All rights reserved.</p>
+    </footer>
+</body>
+</html>

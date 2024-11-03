@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Ancient Artifacts</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Garamond', serif;
+            margin: 0;
+            background-color: #efe2c6;
+            background-image: url('https://storage.googleapis.com/a1aa/image/emBfRdwskqlKy0NtyWbYHu8hxR6MX9X8Q6YSscESVhI31tqTA.jpg'); /* Parchment background */
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container */
+        .sign-in-container {
+ /* Translucent white */
+            border-radius: 12px;
+            padding: 40px;
+            width: 300px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        /* Header */
+        .sign-in-container h1 {
+            font-size: 1.8rem;
+            color: #5e3e20;
+            margin-bottom: 1rem;
+        }
+
+        /* Input Fields */
+        .sign-in-container input[type="text"],
+        .sign-in-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #7a532a;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Sign In Button */
+        .sign-in-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5e3e20;
+            color: #f3e0b7;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .sign-in-container button:hover {
+            background-color: #7a532a;
+        }
+
+        /* Links */
+        .sign-in-container a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #f3e0b7;
+            text-decoration: none;
+            font-size: 1.3rem;
+        }
+
+        .sign-in-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="sign-in-container">
+        <h1>Sign In</h1>
+        <form action = "sign-in" method = "post">
+            <input type="text" name="username" placeholder="username" required>
+            <input type="password" name ="password" placeholder="password" required>
+            <button type="submit">Sign In</button>
+            <a href="Signup.html">Don't have an account? Sign Up</a>
+        </form>
+    </div>
+
+</body>
+</html>

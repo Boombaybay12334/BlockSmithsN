@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Ancient Artifacts</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Garamond', serif;
+            margin: 0;
+            color: #3d2f1b;
+            background-color: #efe2c6; /* Warm parchment color */
+            background-image: url('images/parchment-texture.jpg'); /* Subtle ancient texture */
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: #5e3e20; /* Rich, dark brown */
+            padding: 1.5rem;
+            text-align: center;
+            color: #f3e0b7; /* Warm beige text */
+            border-bottom: 5px double #b8915b; /* Ornate border */
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #f3e0b7;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #b8915b; /* Brass accent on hover */
+        }
+
+        .about-section {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 30px;
+            background-color: rgba(255, 250, 240, 0.95); /* Slight transparency */
+            border: 3px solid #5e3e20;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+            line-height: 1.8;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .about-section:before,
+        .about-section:after {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 4px solid #5e3e20;
+            border-radius: 50%;
+            background-color: #b8915b;
+            top: -20px;
+        }
+
+        .about-section:before { left: -20px; }
+        .about-section:after { right: -20px; }
+
+        .about-section h2 {
+            text-align: center;
+            color: #7a532a; /* Deep, golden brown */
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px #b8915b;
+        }
+
+        .about-section p {
+            color: #3d2f1b;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .about-section img {
+            display: block;
+            max-width: 90%;
+            margin: 25px auto;
+            border: 6px solid #b8915b; /* Gold frame */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #5e3e20;
+            color: #f3e0b7;
+            border-top: 5px double #b8915b;
+            font-size: 1rem;
+        }
+
+        .decorative-border {
+            height: 5px;
+            width: 100%;
+            background-image: linear-gradient(to right, #b8915b, #5e3e20, #b8915b);
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Us</h1>
+        <nav>
+            <ul>
+                <li><a href="index">Home</a></li>
+                <li><a href="search">Search</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="decorative-border"></div>
+
+    <main>
+        <section class="about-section">
+            <h2>Our Journey Through History</h2>
+            <p>Welcome to our Ancient Artifacts Collection, a tribute to the richness and diversity of ancient civilizations. Our journey began with a passion to preserve and share the stories of the past, bringing you treasures from cultures that have shaped the world we know today.</p>
+
+            <p>Each artifact in our collection is a unique piece of history, carefully curated and preserved. From the art of the Egyptians to the relics of ancient Greece, our collection spans millennia and provides a glimpse into the lives, beliefs, and artistry of our ancestors.</p>
+
+            <img src="https://storage.googleapis.com/a1aa/image/RtbQ9p1lDRbiA9uiuoQIQjDcs3fGr0sByMToiTj6Z2fAGPsTA.jpg" alt="Ancient Artifact Image"> <!-- Replace with actual image URL -->
+
+            <p>Our team is dedicated to respecting and honoring these historical artifacts, ensuring they are appreciated and understood for generations to come. We invite you to explore, learn, and be inspired by the incredible stories captured in each piece of our collection.</p>
+        </section>
+    </main>
+
+    <div class="decorative-border"></div>
+
+    <footer>
+        <p>&copy; 2024 Ancient Artifacts. All rights reserved.</p>
+    </footer>
+</body>
+</html>

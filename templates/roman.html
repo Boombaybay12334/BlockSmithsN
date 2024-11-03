@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman Artifacts</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            color: #2b2b2b;
+            background-color: #f5f0e6; /* Light stone background */
+            background-image: url('images/roman-pattern.jpg'); /* Roman-inspired background image */
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: #8a4a3a; /* Roman brick red */
+            padding: 1.5rem;
+            text-align: center;
+            color: #ffd700; /* Gold color for text */
+            border-bottom: 4px solid #d4af37; /* Gold border accent */
+            text-shadow: 1px 1px 2px #2b2b2b;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        .artifact-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .artifact-item {
+            margin: 20px;
+            width: 250px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.95);
+            border: 2px solid #8a4a3a;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .artifact-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .artifact-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .artifact-item h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            color: #8a4a3a;
+        }
+
+        .artifact-item p {
+            font-size: 0.9rem;
+            color: #5a5a5a;
+            margin-bottom: 10px;
+        }
+
+        .artifact-item a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 0.5rem 1rem;
+            background-color: #8a4a3a;
+            color: #ffd700;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .artifact-item a:hover {
+            background-color: #6a3a2a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #8a4a3a;
+            color: #ffd700;
+            margin-top: 30px;
+        }
+
+        /* Form styling */
+        .artifact-form {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #8a4a3a;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .artifact-form h2 {
+            color: #8a4a3a;
+            text-align: center;
+        }
+
+        .artifact-form label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #2b2b2b;
+        }
+
+        .artifact-form input, .artifact-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #8a4a3a;
+            box-sizing: border-box;
+        }
+
+        .artifact-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #8a4a3a;
+            color: #ffd700;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .artifact-form button:hover {
+            background-color: #6a3a2a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Roman Artifact Collection</h1>
+        <nav>
+            <ul>
+                <li><a href="index">Home</a></li>
+                <li><a href="roman-artifacts">Artifacts</a></li>
+                <li><a href="search">Search</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Artifact Form to Add New Artifacts -->
+    <form class="artifact-form" action = '/add_Artifact' method = "post">
+        <h2>Add a New Artifact</h2>
+        <label for="artifactName">Artifact Name:</label>
+        <input type="text" name ="artifactName" placeholder="Enter artifact name">
+
+        <label for="artifactDescription">Description:</label>
+        <textarea name="artifactDescription" rows="3" placeholder="Enter artifact description"></textarea>
+
+        <label for="artifactImage">Image URL:</label>
+        <input type="text" name="artifactImage" placeholder="Enter image URL">
+
+        <button type = "submit">Add Artifact</button>
+    </form>
+
+    <!-- Artifact Gallery Section -->
+    <main>
+        <section class="artifact-gallery" id="artifactGallery">
+            <h2>Explore Our Roman Collection</h2>
+            <!-- Existing artifacts can go here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Roman Artifacts. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript function to add an artifact to the gallery
+        function addArtifact() {
+            const name = document.getElementById("artifactName").value;
+            const description = document.getElementById("artifactDescription").value;
+            const imageUrl = document.getElementById("artifactImage").value;
+
+            if (!name || !description || !imageUrl) {
+                alert("Please fill out all fields.");
+                return;
+            }
+
+            const gallery = document.getElementById("artifactGallery");
+
+            // Create new artifact item
+            const artifactItem = document.createElement("div");
+            artifactItem.classList.add("artifact-item");
+
+            // Add image to the artifact item
+            const img = document.createElement("img");
+            img.src = imageUrl;
+            img.alt = name;
+            artifactItem.appendChild(img);
+
+            // Add title to the artifact item
+            const title = document.createElement("h3");
+            title.textContent = name;
+            artifactItem.appendChild(title);
+
+            // Add description to the artifact item
+            const desc = document.createElement("p");
+            desc.textContent = description;
+            artifactItem.appendChild(desc);
+
+            // Append the new artifact item to the gallery
+            gallery.appendChild(artifactItem);
+
+            // Clear form inputs
+            document.getElementById("artifactName").value = "";
+            document.getElementById("artifactDescription").value = "";
+            document.getElementById("artifactImage").value = "";
+        }
+    </script>
+</body>
+</html>
